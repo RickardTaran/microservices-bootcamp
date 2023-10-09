@@ -6,6 +6,12 @@
       class="w-50 mx-auto mt-3"
     >
     </b-form-input>
+    <b-button 
+      class="mt-3"
+      @click="handleClick()"
+    >
+      Button
+    </b-button>
   </div>
 </template>
 
@@ -18,6 +24,11 @@ export default {
   data() {
     return {
       text: ''
+    }
+  },
+  methods: {
+    handleClick () {
+      console.log(this.text)
     }
   }
 }
