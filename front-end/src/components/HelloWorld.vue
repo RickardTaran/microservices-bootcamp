@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { makeAPICall } from '../utils/api.js'
+import { makeAPICall } from '@utils/api.js'
 
 export default {
   name: 'HelloWorld',
