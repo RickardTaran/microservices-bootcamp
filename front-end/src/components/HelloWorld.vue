@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { makeAPICall } from '../utils/api.js'
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -27,8 +29,14 @@ export default {
     }
   },
   methods: {
-    handleClick () {
-      console.log(this.text)
+    async handleClick () {
+      await makeAPICall({
+        verb: 'POST',
+        route: '/api/msg',
+        data: {
+          msg: this.text
+        }
+      })
     }
   }
 }
